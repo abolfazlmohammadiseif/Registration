@@ -7,12 +7,14 @@ import { RegistrationComponent } from './registration/registration.component';
 import { PeopleComponent } from './people/people.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { WelcomePageComponent } from './welcome-page/welcome-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
-    PeopleComponent
+    PeopleComponent,
+    WelcomePageComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +22,7 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     RouterModule.forRoot([
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
-      //{ path: 'welcome', component: WelcomePageComponent },
+      { path: 'welcome', component: WelcomePageComponent },
       { path: 'registration', component: RegistrationComponent },
       //{ path: 'users', component: UsersListComponent },
       //{
