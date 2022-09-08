@@ -1,0 +1,52 @@
+[
+  {
+    "imageurl": "assets/images/1.jpg",
+    "userId": "1",
+    "name": "Ali",
+    "lastname": "Alavi",
+    "jobCode": "2-A-231-B",
+    "salary": 110.50,
+    "score": 14.0218,
+    "starRating": 3.5
+  },
+  {
+    "imageurl": "assets/images/2.jpg",
+    "userId": "2",
+    "name": "Amin",
+    "lastname": "Amini",
+    "jobCode": "1-A-231-C",
+    "salary": 12.304,
+    "score": 22.8,
+    "starRating": 1.5
+  },
+  {
+    "imageurl": "assets/images/3.jpg",
+    "userId": "3",
+    "name": "Nazanin",
+    "lastname": "Frhadi",
+    "jobCode": "5-M-300-D",
+    "salary": 151.74,
+    "score": 5.228,
+    "starRating": 5
+  },
+  {
+    "imageurl": "assets/images/4.jpg",
+    "userId": "4",
+    "name": "Marya",
+    "lastname": "Markov",
+    "jobCode": "4-Q-451-E",
+    "salary": 124.38,
+    "score": 12.8,
+    "starRating": 4.5
+  },
+  {
+    "imageurl": "assets/images/5.jpg",
+    "userId": "5",
+    "name": "Nita",
+    "lastname": "Robert",
+    "jobCode": "5-F-200-E",
+    "salary": 100.018,
+    "score": 15.001,
+    "starRating": 2.5
+  }
+]
