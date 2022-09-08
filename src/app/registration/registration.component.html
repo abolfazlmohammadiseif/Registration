@@ -1,1 +1,65 @@
-<p>registration works!</p>
+
+<form class="card p-3 bg-dark text-white">
+  <div class="card-header  bg-primary  ">
+    Registration Form
+  </div>
+  <div class="card-body">
+
+    <div class="form-group row">
+      <label for="validationServerFirstname" class="col-sm-2 col-form-label">First name</label>
+      <div class="col-sm-10">
+        <input type="text" class=" bg-white form-control" id="validationServerFirstname" ngModel #validationServerFirstname="ngModel" name="validationServerFirstname" placeholder="First name" required>
+      </div>
+      <div class="valid-feedback" *ngIf="validationServerFirstname.valid">Looks good!</div>
+      <span class="invalid-feedback" *ngIf="!validationServerFirstname.valid">Please insert a Firstname</span>
+    </div>
+
+    <div class="form-group row">
+      <label for="validationServerLastname" class="col-sm-2 col-form-label">Last name</label>
+      <div class="col-sm-10">
+        <input type="text" class="form-control" id="validationServerLastname" ngModel name="validationServerLastname" placeholder="Last name" required>
+      </div>
+      <div class="valid-feedback">Looks good!</div>
+      <span class="invalid-feedback">Please insert a Lastname!</span>
+    </div>
+
+    <div class="form-group row">
+      <label for="validationServerEmail1" class="col-sm-2 col-form-label">Email address</label>
+      <div class="col-sm-10">
+        <input type="email" class="form-control" id="validationServerEmail1" ngModel #validationServerEmail1="ngModel" name="validationServerEmail1" aria-describedby="emailHelp" placeholder="Enter email" required email>
+      </div>
+      <div style="color:lawngreen" *ngIf="validationServerEmail1.valid && (validationServerEmail1.dirty || validationServerEmail1.touched)">Looks good!</div>
+      <span style="color:red" *ngIf="validationServerEmail1.value != '' && validationServerEmail1.invalid && (validationServerEmail1.dirty)">Please insert a valid Email address!<br /></span>
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+
+    <div class="form-group row">
+      <label for="validationServerPassword" class="col-sm-2 col-form-label">Password</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" id="validationServerPassword" ngModel name="validationServerPassword" placeholder="Password" required>
+      </div>
+      <div class="valid-feedback">Looks good!</div>
+      <span class="invalid-feedback">Please insert a Password!</span>
+    </div>
+
+    <div class="form-group row">
+      <label for="validationServerPassword2" class="col-sm-2 col-form-label">Retype password</label>
+      <div class="col-sm-10">
+        <input type="password" class="form-control" id="validationServerPassword2" ngModel name="validationServerPassword2" placeholder="Retype Password" required>
+      </div>
+      <div class="valid-feedback">Looks good!</div>
+      <span class="invalid-feedback">Passwords don't match!</span>
+    </div>
+
+    <div class="form-group row form-check">
+      <div class="col-sm-10">
+        <input type="checkbox" class="form-check-input" name="acceptRules" ngModel #acceptRules>
+      </div>
+      <label class="form-check-label" for="acceptRules">Accept the rules.</label>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="!acceptRules.checked">Submit</button>
+
+  </div>
+
+</form>
+<!-- -->
