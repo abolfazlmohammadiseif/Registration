@@ -2,8 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\src",
-    "\\src\\app"
+    "\\src\\app",
+    "\\src\\app\\registration",
+    "\\src\\app\\welcome-page",
+    "\\src\\assets"
   ],
-  "SelectedNode": "\\src\\app\\app.component.html",
+  "SelectedNode": "\\src\\app\\welcome-page\\welcome-page.component.css",
   "PreviewInSolutionExplorer": false
 }

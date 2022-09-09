@@ -1,1 +1,52 @@
-<p>people works!</p>
+<div>
+  <div class="card text-white bg-dark">
+    <div class="card-header">
+      {{pageTitle}}
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-2">Filter by: </div>
+        <div class="col-md-4">
+          <input type="text" [(ngModel)]="listFilter" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h5 class="card-title">Filtered by: {{listFilter}}</h5>
+        </div>
+      </div>
+
+      <table class="table table-dark" *ngIf="users.length">
+        <thead>
+          <tr>
+            <th><button class="btn btn-primary" (click)="toggleImage()">{{showImage? 'Hide': 'Show'}} Image</button></th>
+            <th scope="col">#</th>
+            <th scope="col">Firstname</th>
+            <th scope="col">Lastname</th>
+            <th scope="col">Star Rating</th>
+            <th scope="col">Details</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of filteredUsers; let userindex=index">
+            <td>
+              <img *ngIf="showImage" [src]='user.imageurl'
+                   [title]='user.name'
+                   [style.width.px]='imageWidth'
+                   [style.margin.px]='imageMargin' />
+            </td>
+            <td>{{userindex + 1 }}</td>
+            <td>{{user.name | lowercase }}</td>
+            <td>{{user.lastname | uppercase}}</td>
+            <td><app-star (ratingClicked)="onRatingClicked($event)" [rating]='user.starRating'></app-star></td>
+            <td><a class="btn btn-primary" style="width:80px" [routerLink]="['/users',user.userId]"> View</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+
+
+    </div>
+  </div>
+
+</div>
